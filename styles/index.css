@@ -46,6 +46,11 @@
   ascent-override: 90%;
 }
 
+::-moz-selection {
+  color: var(--color-teal-1);
+  background-color: var(--color-blue-3);
+}
+
 ::selection {
   color: var(--color-teal-1);
   background-color: var(--color-blue-3);
@@ -81,6 +86,7 @@ article {
 }
 
 h1 {
+  -webkit-margin-after: var(--space-m-l);
   margin-block-end: var(--space-m-l);
   font-family: "Source Sans Pro", "Source Sans Pro Fallback", sans-serif;
   font-size: var(--size-5);
@@ -128,10 +134,4 @@ button {
   padding: 0.5em 1em;
   color: var(--color-blue-1);
   background-color: var(--color-blue-3);
-}
-
-@media (min-width: 37em) {
-}
-
-@media (min-width: 80em) {
 }
