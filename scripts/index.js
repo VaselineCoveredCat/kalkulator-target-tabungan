@@ -48,27 +48,27 @@ CALC.addEventListener("click", (event) => {
     const OFFSET_LOW = GOAL - GOAL * 0.02;
     const OFFSET_HIGH = GOAL + GOAL * 0.02;
 
-    let MAX = 100;
-    let MIN = 0;
-    let MID = 0;
-    let BANK = 0;
+    let max = 100;
+    let min = 0;
+    let mid = 0;
+    let bank = 0;
 
     if (INCOME * DEADLINE > GOAL) {
       while (true) {
-        MID = (MIN + MAX) / 2;
-        BANK = 0;
+        mid = (min + max) / 2;
+        bank = 0;
 
         for (let i = 0; i < DEADLINE; i++) {
-          BANK = BANK + INCOME * (MID / 100);
+          bank = bank + INCOME * (mid / 100);
         }
 
-        if (BANK >= OFFSET_LOW && BANK <= OFFSET_HIGH) {
-          document.querySelector(".js-result").textContent = `${INCOME * (MID / 100)}`;
+        if (bank >= OFFSET_LOW && bank <= OFFSET_HIGH) {
+          document.querySelector(".js-result").textContent = `${INCOME * (mid / 100)}`;
           break;
-        } else if (BANK < OFFSET_LOW) {
-          MIN = MID;
-        } else if (BANK > OFFSET_HIGH) {
-          MAX = MID;
+        } else if (bank < OFFSET_LOW) {
+          min = mid;
+        } else if (bank > OFFSET_HIGH) {
+          max = mid;
         }
       }
     } else {
