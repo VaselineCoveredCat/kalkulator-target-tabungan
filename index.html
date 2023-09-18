@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <link
+      as="font"
+      crossorigin="anonymous"
+      href="./fonts/source-sans-pro-v21-latin-900.woff2"
+      rel="preload"
+      type="font/woff2"
+    />
+
+    <link
+      as="font"
+      crossorigin="anonymous"
+      href="./fonts/sintony-v13-latin-regular.woff2"
+      rel="preload"
+      type="font/woff2"
+    />
+
+    <link href="./styles/reset.css" rel="stylesheet" />
+    <link href="./styles/index.css" rel="stylesheet" />
+
+    <link href="./favicon.ico" rel="icon" sizes="any" />
+    <link href="./favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="./apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="./site.webmanifest" rel="manifest" />
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Firas Hasnawan" name="author" />
+    <meta
+      content="Hitung berapa banyak uang yang perlu kamu tabung setiap bulan untuk mencapai tujuan tabungan tertentu"
+      name="description"
+    />
+
+    <title>Kalkulator Target Tabungan</title>
+  </head>
+
+  <body>
+    <main>
+      <article>
+        <h1>Kalkulator Target Tabungan</h1>
+
+        <p>
+          Cari tahu berapa banyak uang yang harus kamu sisihkan di rekening tabungan kamu setiap bulannya untuk mencapai
+          tujuan kamu. Beritahu aku berapa banyak yang ingin kamu tabung dan kapan kamu ingin mencapai tujuan kamu. Aku
+          akan menghitung berapa banyak yang harus ditabung setiap bulan.
+        </p>
+
+        <form>
+          <div class="form-group">
+            <label for="goal">Target tabungan yang diinginkan</label>
+            <input
+              aria-describedby="goal-error"
+              aria-invalid="false"
+              aria-required
+              class="js-check"
+              id="goal"
+              inputmode="numeric"
+              name="goal"
+              required
+              type="text"
+            />
+            <p class="error" hidden id="goal-error">Silahkan masukkan angka lebih besar atau sama dengan 1</p>
+          </div>
+
+          <div class="form-group">
+            <label for="income">Pendapatan bulanan</label>
+            <input
+              aria-describedby="income-error"
+              aria-invalid="false"
+              aria-required
+              class="js-check"
+              id="income"
+              inputmode="numeric"
+              name="income"
+              required
+              type="text"
+            />
+            <p class="error" hidden id="income-error">Silahkan masukkan angka lebih besar atau sama dengan 1</p>
+          </div>
+
+          <div class="form-group">
+            <label for="deadline">Durasi waktu, dalam bulan</label>
+            <input
+              aria-describedby="deadline-error"
+              aria-invalid="false"
+              aria-required
+              class="js-check"
+              id="deadline"
+              inputmode="numeric"
+              name="deadline"
+              required
+              type="text"
+            />
+            <p class="error" hidden id="deadline-error">Silahkan masukkan angka lebih besar atau sama dengan 1</p>
+          </div>
+
+          <button>Hitung</button>
+        </form>
+
+        <p class="js-result"></p>
+      </article>
+    </main>
+
+    <script defer="true" src="./scripts/index.js"></script>
+  </body>
+</html>

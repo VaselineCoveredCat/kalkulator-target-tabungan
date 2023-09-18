@@ -1,0 +1,137 @@
+:root {
+  --color-rose-3: #ff3b8d;
+  --color-yellow-3: #9c8b00;
+  --color-teal-1: #d7fff7;
+  --color-teal-2: #00ffe4;
+  --color-teal-5: #00443c;
+  --color-blue-1: #f0f4ff;
+  --color-blue-3: #0089fc;
+  --step--2: clamp(0.69rem, calc(0.68rem + 0.08vw), 0.77rem);
+  --size-0: clamp(1rem, calc(0.93rem + 0.38vw), 1.38rem);
+  --size-5: clamp(2.49rem, calc(1.83rem + 3.3vw), 5.79rem);
+  --space-s: clamp(1rem, calc(0.93rem + 0.38vw), 1.38rem);
+  --space-m-l: clamp(1.5rem, calc(1.25rem + 1.25vw), 2.75rem);
+  --space-xs-3xl: clamp(0.75rem, calc(-0.75rem + 7.5vw), 8.25rem);
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Source Sans Pro"), url("../fonts/source-sans-pro-v21-latin-900.woff2") format("woff2"),
+    url("../fonts/source-sans-pro-v21-latin-900.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sintony";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Sintony"), url("../fonts/sintony-v13-latin-regular.woff2") format("woff2"),
+    url("../fonts/sintony-v13-latin-regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans Pro Fallback";
+  src: local("Arial");
+  size-adjust: 93.75%;
+  ascent-override: 110%;
+}
+
+@font-face {
+  font-family: "Sintony Fallback";
+  src: local("Arial");
+  size-adjust: 111.17999999999998%;
+  ascent-override: 90%;
+}
+
+::selection {
+  color: var(--color-teal-1);
+  background-color: var(--color-blue-3);
+}
+
+:focus-visible {
+  outline: var(--color-blue-3) solid 0.25em;
+}
+
+html {
+  background-color: black;
+}
+
+body {
+  font-family: "Sintony", "Sintony Fallback", sans-serif;
+  font-size: var(--size-0);
+  font-weight: 400;
+  color: var(--color-teal-5);
+  background-color: var(--color-teal-1);
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 100%;
+  place-items: center;
+  min-height: 100vh;
+  padding: var(--space-xs-3xl);
+}
+
+article {
+  max-width: 60ch;
+}
+
+h1 {
+  margin-block-end: var(--space-m-l);
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", sans-serif;
+  font-size: var(--size-5);
+  font-weight: 900;
+}
+
+:is(p, .form-group) {
+  margin-block: var(--space-s);
+}
+
+form :is(input, button) {
+  width: 100%;
+  max-width: 30ch;
+}
+
+.form-group :is(span, .error) {
+  font-size: var(--step--2);
+  color: var(--color-rose-3);
+}
+
+.error {
+  margin-block: 0;
+}
+
+:is(input, button) {
+  border-radius: 0.25em;
+}
+
+input {
+  padding: 0.5em;
+  color: var(--color-teal-5);
+  background-color: var(--color-teal-2);
+  border: 0.125em solid var(--color-teal-2);
+}
+
+.invalid {
+  border-color: var(--color-rose-3);
+}
+
+.valid {
+  border-color: var(--color-yellow-3);
+}
+
+button {
+  padding: 0.5em 1em;
+  color: var(--color-blue-1);
+  background-color: var(--color-blue-3);
+}
+
+@media (min-width: 37em) {
+}
+
+@media (min-width: 80em) {
+}
