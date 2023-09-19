@@ -63,7 +63,9 @@ CALC.addEventListener("click", (event) => {
         }
 
         if (bank >= OFFSET_LOW && bank <= OFFSET_HIGH) {
-          document.querySelector(".js-result").textContent = `${INCOME * (mid / 100)}`;
+          document.querySelector(".js-result").textContent = `${new Intl.NumberFormat("id").format(
+            (INCOME * (mid / 100)).toFixed()
+          )}`;
           break;
         } else if (bank < OFFSET_LOW) {
           min = mid;
