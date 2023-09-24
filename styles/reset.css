@@ -38,6 +38,10 @@ body {
   text-rendering: optimizeSpeed;
 }
 
+:where(:target) {
+  scroll-margin-block: 5ex;
+}
+
 :where(img, svg, label, input, textarea, button, video, audio, select, canvas, iframe, embed, object) {
   display: block;
 }
@@ -73,6 +77,10 @@ body {
 
 :where(textarea) {
   resize: none;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  text-wrap: balance;
 }
 
 :where(p, h1, h2, h3, h4, h5, h6) {
