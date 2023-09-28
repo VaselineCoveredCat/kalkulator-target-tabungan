@@ -1,0 +1,24 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "autoprefix": "npx postcss index.css --use autoprefixer --no-map -d build/",
+    "lint": "npx stylelint \"styles/index.css\" --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "postcss": "^8.4.30",
+    "sass": "^1.68.0",
+    "stylelint": "^15.10.3",
+    "stylelint-config-recess-order": "^4.3.0"
+  },
+  "type": "module"
+}
