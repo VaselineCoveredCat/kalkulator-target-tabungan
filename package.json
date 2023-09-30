@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "autoprefix": "npx postcss styles/index.css --use autoprefixer --no-map --replace",
-    "babel": "npx babel scripts/index.js --out-dir scripts/ --minified",
+    "babel": "npx babel scripts/index.js --out-dir scripts/",
     "css": "npm run sass && npm run autoprefix && npm run stylelint",
-    "js": "npx tsc && npm run babel",
+    "gcc": "npx google-closure-compiler --js scripts/index.js --js_output_file scripts/main.js --language_out ECMASCRIPT5",
+    "js": "npx tsc && npm run gcc",
     "sass": "sass src/sass/:styles/ --no-source-map",
     "stylelint": "npx stylelint styles/index.css --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +20,7 @@
     "@babel/core": "^7.23.0",
     "@babel/preset-env": "^7.22.20",
     "autoprefixer": "^10.4.16",
+    "google-closure-compiler": "^20230802.0.0",
     "postcss": "^8.4.30",
     "postcss-cli": "^10.1.0",
     "sass": "^1.68.0",
