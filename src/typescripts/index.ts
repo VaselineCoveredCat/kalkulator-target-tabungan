@@ -50,10 +50,27 @@ calc.addEventListener("click", (event: MouseEvent): void => {
     let max: number = 100;
     let min: number = 0;
     let mid: number = 0;
-    let bank: number = 0;
 
     if (income * deadline > goal) {
-      console.log();
+      while (true) {
+        let saved: number = 0;
+        mid = (min + max) / 2;
+
+        for (let i = 0; i < deadline; i++) {
+          saved = saved + income * (mid / 100);
+        }
+
+        if (saved >= offsetLow && saved <= offsetHigh) {
+          document.querySelector(".js-result")!.textContent = `${new Intl.NumberFormat("id").format(
+            +(income * (mid / 100)).toFixed()
+          )}`;
+          break;
+        } else if (saved < offsetLow) {
+          min = mid;
+        } else if (saved > offsetHigh) {
+          max = mid;
+        }
+      }
     } else {
       document.querySelector(".js-result")!.textContent = "Tidak mungkin.";
     }
