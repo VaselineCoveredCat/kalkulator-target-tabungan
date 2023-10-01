@@ -52,12 +52,12 @@
 }
 
 ::selection {
-  color: $teal-1;
-  background-color: $blue-3;
+  color: $neutral99;
+  background-color: $primary40;
 }
 
 :focus-visible {
-  outline: $blue-3 solid 0.25em;
+  outline: $primary40 solid 0.125em;
 }
 
 :not(:active):focus-visible {
@@ -65,7 +65,7 @@
 }
 
 html {
-  background-color: black;
+  background-color: $neutral10;
   font-size: 100%;
   tab-size: 2;
   cursor: default;
@@ -77,8 +77,8 @@ body {
   font-family: "Sintony", "Sintony Fallback", sans-serif;
   font-size: $step-0;
   font-weight: 400;
-  color: $teal-5;
-  background-color: $teal-1;
+  color: $neutral10;
+  background-color: $neutral99;
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
@@ -99,11 +99,14 @@ article {
   max-width: 60ch;
 }
 
+h1, .result {
+  font-family: "Source Sans Pro", "Source Sans Pro Fallback", sans-serif;
+  font-weight: 900;
+}
+
 h1 {
   margin-block-end: $space-m-l;
-  font-family: "Source Sans Pro", "Source Sans Pro Fallback", sans-serif;
   font-size: $step-5;
-  font-weight: 900;
   text-wrap: balance;
 }
 
@@ -125,7 +128,7 @@ form {
 .form-group {
   span, .error {
     font-size: $step--2;
-    color: $rose-3;
+    color: $error40;
   }
 }
 
@@ -146,17 +149,18 @@ input, button {
 
 input {
   padding: 0.5em;
-  color: $teal-5;
-  background-color: $teal-2;
-  border: 0.125em solid $teal-2;
+  color: $neutral-variant30;
+  background-color: $neutral-variant95;
+  border: 0.125em solid $neutral-variant95;
+  caret-color: $primary40;
 }
 
 .invalid {
-  border-color: $rose-3;
+  border-color: $error40;
 }
 
-.valid {
-  border-color: $yellow-3;
+.result {
+  font-size: $step-1;
 }
 
 button {
@@ -166,8 +170,8 @@ button {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   padding: 0.5em 1em;
-  color: $blue-1;
-  background-color: $blue-3;
+  color: $neutral99;
+  background-color: $primary40;
   text-transform: none;
   cursor: pointer;
 }
